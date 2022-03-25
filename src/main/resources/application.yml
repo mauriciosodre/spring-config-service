@@ -3,5 +3,9 @@ server:
 spring:
   application:
     name: config-service
-  profiles:
-    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mauriciosodre/spring-services-configurations.git
+          search-paths: 'greeting-service*'
